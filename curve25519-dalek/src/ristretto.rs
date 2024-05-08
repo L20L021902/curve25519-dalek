@@ -215,7 +215,7 @@ use crate::traits::{MultiscalarMul, VartimeMultiscalarMul, VartimePrecomputedMul
 ///
 /// The Ristretto encoding is canonical, so two points are equal if and
 /// only if their encodings are equal.
-#[derive(Copy, Clone, Eq, PartialEq, Hash)]
+#[derive(Copy, Clone, Eq, PartialEq, Hash, Ord, PartialOrd)]
 pub struct CompressedRistretto(pub [u8; 32]);
 
 impl ConstantTimeEq for CompressedRistretto {
